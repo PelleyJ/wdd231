@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chamber Business Directory Page</title>
-  <meta name="description" content="Chamber of Commerce Directory Page for Local Businesses">
-  <meta name="author" content="Samuel Pelley">
-  <meta property="og:title" content="Chamber Business Directory Page">
-  <meta property="og:description" content="Supporting local businesses through our Chamber of Commerce Directory">
-  <meta property="og:image" content="https://pelleyj.github.io/wdd231/chamber/images/og-image.png">
-  <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/directory.html">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/directory.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Business Directory Page</title>
+    <meta name="description" content="Chamber of Commerce Directory Page for Local Businesses">
+    <meta name="author" content="Samuel Pelley">
+    <meta property="og:title" content="Chamber Business Directory Page">
+    <meta property="og:description" content="Explore local chamber member businesses.">
+    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/directory.html">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- ✅ Correct Google Font Preconnect & Single Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/directory.css">
 </head>
+
 <body>
-  <header>
-    <h1>Chamber Business Directory Page</h1>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="directory.html" aria-current="page">Directory</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="directory.html" aria-current="page">Directory</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-  </header>
+    <main>
+        <!-- ✅ H1 now placed as first element inside <main> -->
+        <h1>Chamber Business Directory Page</h1>
 
-  <main>
-    <div class="view-toggle">
-      <button id="grid-view">Grid</button>
-      <button id="list-view">List</button>
-    </div>
-    <section id="members-container" class="grid"></section>
-  </main>
+        <div class="view-toggle">
+            <button id="grid-view">Grid</button>
+            <button id="list-view">List</button>
+        </div>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Chamber of Commerce</p>
-  </footer>
+        <section id="members-container" class="grid"></section>
+    </main>
 
-  <script src="scripts/directory.js" defer></script>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+    </footer>
+
+    <script src="scripts/directory.js" defer></script>
 </body>
+
 </html>
