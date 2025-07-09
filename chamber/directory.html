@@ -6,34 +6,50 @@
   <title>Chamber Business Directory Page</title>
   <meta name="description" content="Chamber of Commerce Directory Page for Local Businesses">
   <meta name="author" content="Samuel Pelley">
+
+  <!-- Open Graph Meta -->
   <meta property="og:title" content="Chamber Business Directory">
   <meta property="og:description" content="Explore local chamber member businesses.">
   <meta property="og:image" content="images/og-image.png">
   <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/directory.html">
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.io/favicon-32x32.png" type="image/png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/directory.css">
 </head>
 <body>
   <header>
-    <h1>Chamber Business Directory Page</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="directory.html" aria-current="page">Directory</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
+    <h1>Chamber Business Directory Page</h1>
+
     <div class="view-toggle">
       <button id="grid-view">Grid</button>
       <button id="list-view">List</button>
     </div>
-    <section id="members-container" class="grid"></section>
+
+    <section id="members-container" class="grid">
+      <!-- Member cards will be injected here -->
+    </section>
   </main>
+
   <footer>
     <p>&copy; <span id="year"></span> Chamber of Commerce</p>
   </footer>
+
   <script src="scripts/directory.js" defer></script>
 </body>
 </html>
