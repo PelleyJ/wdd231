@@ -1,57 +1,36 @@
-const gridButton = document.querySelector("#grid");
-const listButton = document.querySelector("#list");
-const display = document.querySelector("#directory");
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('members-container');
+  const gridBtn = document.getElementById('grid-view');
+  const listBtn = document.getElementById('list-view');
 
-gridButton.addEventListener("click", () => {
-  display.classList.add("grid");
-  display.classList.remove("list");
-});
+  fetch('data/members.json')
+    .then(response => response.json())
+    .then(data => {
+      displayMembers(data);
+    });
 
-listButton.addEventListener("click", () => {
-  display.classList.add("list");
-  display.classList.remove("grid");
-});
+  function displayMembers(members) {
+    container.innerHTML = '';
+    members.forEach(member => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${member.image}" alt="${member.name} logo">
+        <h2>${member.name}</h2>
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <a href="${member.website}" target="_blank">${member.website}</a>
+      `;
+      container.appendChild(card);
+    });
+  }
 
-async function getMembers() {
-  const response = await fetch("data/members.json");
-  const data = await response.json();
-  displayMembers(data);
-}
-
-function displayMembers(members) {
-  members.forEach(member => {
-    const section = document.createElement("section");
-
-    const img = document.createElement("img");
-    img.src = `images/${member.image}`;
-    img.alt = `${member.name} logo`;
-
-    const name = document.createElement("h3");
-    name.textContent = member.name;
-
-    const address = document.createElement("p");
-    address.textContent = member.address;
-
-    const phone = document.createElement("p");
-    phone.textContent = member.phone;
-
-    const link = document.createElement("a");
-    link.href = member.website;
-    link.textContent = "Visit Website";
-    link.target = "_blank";
-
-    section.appendChild(img);
-    section.appendChild(name);
-    section.appendChild(address);
-    section.appendChild(phone);
-    section.appendChild(link);
-
-    display.appendChild(section);
+  gridBtn.addEventListener('click', () => {
+    container.className = 'grid';
   });
-}
+  listBtn.addEventListener('click', () => {
+    container.className = 'list';
+  });
 
-getMembers();
-
-// Footer info
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent = document.lastModified;
+  document.getElementById('year').textContent = new Date().getFullYear();
+});

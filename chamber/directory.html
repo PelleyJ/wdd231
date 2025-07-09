@@ -3,61 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber Business Directory Page</title>
   <meta name="description" content="Chamber of Commerce Directory Page for Local Businesses">
   <meta name="author" content="Samuel Pelley">
   <meta property="og:title" content="Chamber Business Directory">
   <meta property="og:description" content="Explore local chamber member businesses.">
   <meta property="og:image" content="images/og-image.png">
   <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/directory.html">
-
-  <!-- Google Fonts -->
+  <link rel="icon" href="favicon.io/favicon-32x32.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon.io/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="favicon.io/apple-touch-icon.png">
-  <link rel="manifest" href="favicon.io/site.webmanifest">
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="styles/directory.css">
-
-  <title>Chamber Business Directory Page</title>
 </head>
-
 <body>
   <header>
     <h1>Chamber Business Directory Page</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" aria-current="page">Directory</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="directory.html" aria-current="page">Directory</a>
     </nav>
   </header>
-
   <main>
-    <section class="view-toggle">
-      <button id="gridView">Grid View</button>
-      <button id="listView">List View</button>
-    </section>
-
-    <section id="members" class="grid-view">
-      <!-- Cards will be populated dynamically with JavaScript -->
-    </section>
+    <div class="view-toggle">
+      <button id="grid-view">Grid</button>
+      <button id="list-view">List</button>
+    </div>
+    <section id="members-container" class="grid"></section>
   </main>
-
   <footer>
-    <p>&copy; <span id="year"></span> Star Chamber of Commerce</p>
-    <p>Project by Samuel Pelley</p>
+    <p>&copy; <span id="year"></span> Chamber of Commerce</p>
   </footer>
-
-  <!-- JavaScript -->
-  <script src="scripts/directory.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="scripts/directory.js" defer></script>
 </body>
 </html>
