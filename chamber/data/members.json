@@ -4,7 +4,7 @@
     "address": "2115 S Vista Avenue, Boise ID 83705",
     "phone": "(208) 342-9386",
     "website": "https://idahowebsites.com/",
-    "image": "idweb-logo.png",
+    "image": "https://via.placeholder.com/150?text=ID+Web",
     "membership": "gold"
   },
   {
@@ -12,7 +12,7 @@
     "address": "4072 E Arch Drive, Meridian ID 83646",
     "phone": "(208) 631-0640",
     "website": "https://www.surgewebdesign.com/",
-    "image": "surge-logo.png",
+    "image": "https://via.placeholder.com/150?text=Surge+Web+Design",
     "membership": "silver"
   },
   {
@@ -20,7 +20,7 @@
     "address": "1788 E Summerplace Ct, Meridian ID 83646",
     "phone": "(208) 631-4984",
     "website": "https://graphiczen.com/",
-    "image": "graphiczen-logo.png",
+    "image": "https://via.placeholder.com/150?text=Graphic+Zen",
     "membership": "member"
   },
   {
@@ -28,7 +28,7 @@
     "address": "1215 3rd St, Nampa ID 83651",
     "phone": "(208) 461-5070",
     "website": "https://www.peppershock.com/",
-    "image": "peppershock-logo.png",
+    "image": "https://via.placeholder.com/150?text=Peppershock+Media",
     "membership": "gold"
   },
   {
@@ -36,7 +36,7 @@
     "address": "Star, Idaho 83669",
     "phone": "(208) 488-5810",
     "website": "https://flashtechnicalservices.com/",
-    "image": "flashtech-logo.png",
+    "image": "https://via.placeholder.com/150?text=Flash+Tech",
     "membership": "silver"
   },
   {
@@ -44,7 +44,7 @@
     "address": "1725 E Overland Rd, Meridian ID 83642",
     "phone": "(208) 888-4073",
     "website": "https://www.metroexpresscarwash.com/",
-    "image": "metroexpress-logo.png",
+    "image": "https://via.placeholder.com/150?text=Metro+Express",
     "membership": "member"
   }
 ]
