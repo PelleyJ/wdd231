@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boise Chamber of Commerce homepage with weather, events, and member spotlights.">
+  <meta name="author" content="Samuel Pelley">
+  <title>Boise Chamber of Commerce</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <header>
+    <h1>Boise Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="#">Join</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Downtown Boise cityscape" loading="lazy">
+      <div class="cta">
+        <a href="#">Join the Chamber →</a>
+      </div>
+    </section>
+
+    <!-- Events & Weather -->
+    <section class="events-weather">
+      <div class="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>Boise Business Meetup - July 22</li>
+          <li>Downtown Market Networking - July 29</li>
+          <li>Chamber Lunch & Learn - August 5</li>
+        </ul>
+      </div>
+
+      <div class="weather">
+        <h2>Current Weather in Boise</h2>
+        <p><strong>Temperature:</strong> <span id="current-temp">--</span> °F</p>
+        <p><strong>Condition:</strong> <span id="description">Loading...</span></p>
+        <div id="forecast"></div>
+      </div>
+    </section>
+
+    <!-- Spotlight Members -->
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div class="spotlight-grid" id="spotlights"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Boise Chamber of Commerce | Samuel Pelley</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* Chamber index styles */
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.hero .cta {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+.hero .cta a {
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.events-weather {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.events, .weather {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.spotlights {
+  padding: 1rem;
+}
+
+.spotlight-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.spotlight-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.spotlight-card img {
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .events-weather {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
