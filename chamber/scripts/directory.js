@@ -15,11 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.className = 'card';
       card.innerHTML = `
-        <img src="${member.image}" alt="${member.name} logo">
-        <h2>${member.name}</h2>
-        <p>${member.address}</p>
-        <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">${member.website}</a>
+        <img src="images/${member.image}" alt="${member.name} logo">
+        <div>
+          <h2>${member.name}</h2>
+          <p>${member.address}</p>
+          <p>${member.phone}</p>
+          <a href="${member.website}" target="_blank">${member.website}</a>
+        </div>
       `;
       container.appendChild(card);
     });
@@ -28,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gridBtn.addEventListener('click', () => {
     container.className = 'grid';
   });
+
   listBtn.addEventListener('click', () => {
     container.className = 'list';
   });
