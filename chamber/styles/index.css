@@ -1,26 +1,30 @@
-/* Chamber index styles - Clean Light Theme with Blues and Whites */
-
-:root {
-  --primary-color: #0077cc;
-  --secondary-color: #e0f0ff;
-  --text-color: #1a1a1a;
-  --bg-color: #ffffff;
-  --light-gray: #f2f2f2;
-  --border-color: #cbd6e2;
-  --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
+/* Chamber Home Page Styles */
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  background-color: #f3f8fd;
+  color: #222;
 }
 
+header {
+  background-color: #e0f0ff;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-color: #e0f0ff;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Hero Section */
 .hero {
   position: relative;
+  max-height: 400px;
+  overflow: hidden;
 }
 
 .hero img {
@@ -28,94 +32,82 @@ body {
   height: auto;
   object-fit: cover;
   display: block;
-  max-height: 600px;
 }
 
 .hero .cta {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  background: rgba(0, 0, 0, 0.6);
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 51, 0.7);
   padding: 1rem 1.5rem;
   border-radius: 8px;
 }
 
 .hero .cta a {
-  color: white;
+  color: #ffffff;
   font-size: 1.25rem;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
 
+/* Events and Weather */
 .events-weather {
   display: grid;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-  background-color: var(--light-gray);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
 }
 
-.events,
-.weather {
-  background-color: var(--bg-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--card-shadow);
+.events, .weather {
+  background-color: #f0faff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.events h2,
-.weather h2,
-.spotlights h2 {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-
+/* Spotlights */
 .spotlights {
-  background-color: var(--light-gray);
-  padding: 2rem 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
 }
 
 .spotlight-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
   grid-template-columns: 1fr;
 }
 
 .spotlight-card {
-  background: var(--bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #cce0f0;
+  border-radius: 6px;
   padding: 1rem;
   text-align: center;
-  box-shadow: var(--card-shadow);
-  transition: transform 0.2s;
-}
-
-.spotlight-card:hover {
-  transform: translateY(-3px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .spotlight-card img {
   max-width: 100px;
-  margin: 0 auto 1rem;
+  height: auto;
+  margin: 0 auto 0.5rem;
   display: block;
 }
 
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+.spotlight-card a {
+  color: #0077cc;
+  text-decoration: none;
+  word-wrap: break-word;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
+/* Responsive Layouts */
 @media (min-width: 600px) {
   .events-weather {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
   .spotlight-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }

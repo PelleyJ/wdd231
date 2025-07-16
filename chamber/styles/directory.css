@@ -1,13 +1,15 @@
+/* Chamber Directory Styles - Updated for Light Blue Theme */
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  background-color: #f3f3f3;
+  background-color: #f3f8fd;
   color: #222;
 }
 
 header {
   text-align: center;
-  background-color: #e0e0e0;
+  background-color: #e0f0ff;
   padding: 1rem;
 }
 
@@ -41,9 +43,11 @@ header {
 }
 
 .card {
-  background-color: white;
+  background-color: #ffffff;
   padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #cce0f0;
+  border-radius: 6px;
   text-align: center;
 }
 
@@ -59,11 +63,16 @@ header {
   word-wrap: break-word;
   display: inline-block;
   margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
 }
 
 footer {
   text-align: center;
-  background-color: #e0e0e0;
+  background-color: #e0f0ff;
   padding: 1rem;
   font-size: 0.9rem;
 }
