@@ -7,17 +7,36 @@ body {
   color: #222;
 }
 
+/* Header Layout */
 header {
   background-color: #e0f0ff;
-  padding: 1rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
 }
 
-footer {
-  text-align: center;
-  background-color: #e0f0ff;
-  padding: 1rem;
-  font-size: 0.9rem;
+header img {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #005999;
 }
 
 /* Hero Section */
@@ -54,33 +73,45 @@ footer {
 .events-weather {
   display: grid;
   gap: 1rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: #ffffff;
 }
 
-.events, .weather {
+.events,
+.weather {
   background-color: #f0faff;
-  padding: 1rem;
-  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.events h2,
+.weather h2 {
+  margin-top: 0;
+  color: #003366;
 }
 
 /* Spotlights */
 .spotlights {
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: #ffffff;
+}
+
+.spotlights h2 {
+  text-align: center;
+  color: #003366;
 }
 
 .spotlight-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-columns: 1fr;
 }
 
 .spotlight-card {
   background: #ffffff;
   border: 1px solid #cce0f0;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 1rem;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -96,9 +127,23 @@ footer {
 .spotlight-card a {
   color: #0077cc;
   text-decoration: none;
+  font-weight: 500;
   word-wrap: break-word;
   display: inline-block;
   margin-top: 0.5rem;
+}
+
+.spotlight-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #e0f0ff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #333;
 }
 
 /* Responsive Layouts */
@@ -109,5 +154,9 @@ footer {
 
   .spotlight-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  header {
+    justify-content: space-between;
   }
 }
