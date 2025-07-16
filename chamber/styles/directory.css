@@ -1,95 +1,69 @@
-:root {
-  --font-main: 'Roboto', sans-serif;
-  --bg: #ffffff;
-  --card-bg: #f9f9f9;
-  --border: #ddd;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --link-color: #0056b3;
-}
-
 body {
-  font-family: var(--font-main);
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  background-color: var(--bg);
+  background-color: #f3f3f3;
+  color: #222;
 }
 
 header {
-  padding: 1rem;
   text-align: center;
-  background-color: #eaeaea;
+  background-color: #e0e0e0;
+  padding: 1rem;
 }
 
-.view-buttons {
+.view-toggle {
   margin-top: 0.5rem;
 }
 
-button {
-  background: none;
+.view-toggle button {
+  background-color: transparent;
   border: none;
-  cursor: pointer;
   margin: 0 0.25rem;
+  cursor: pointer;
 }
 
-button img {
-  width: 32px;
-  height: 32px;
+.view-toggle img {
+  width: 30px;
+  height: 30px;
+  filter: invert(25%) sepia(10%) saturate(500%) hue-rotate(180deg);
 }
 
-#members-container {
+#members-container.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
   padding: 1rem;
 }
 
-.grid .card,
-.list .card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  box-shadow: 0 2px 5px var(--shadow);
+#members-container.list {
+  display: block;
   padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.list {
-  display: block;
-}
-
-.list .card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  text-align: left;
-}
-
 .card img {
-  max-width: 100px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-.list .card img {
-  margin-bottom: 0;
-}
-
-.card h2 {
-  margin: 0.5rem 0;
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
 .card a {
+  color: #0077cc;
+  word-wrap: break-word;
   display: inline-block;
-  word-break: break-word;
-  color: var(--link-color);
-  text-decoration: none;
-  padding: 0.25rem 0;
-}
-
-.card a:hover {
-  text-decoration: underline;
+  margin-top: 0.5rem;
 }
 
 footer {
   text-align: center;
+  background-color: #e0e0e0;
   padding: 1rem;
-  background-color: #eaeaea;
+  font-size: 0.9rem;
 }
