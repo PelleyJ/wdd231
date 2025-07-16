@@ -3,51 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boise Chamber of Commerce</title>
   <meta name="description" content="Boise Chamber of Commerce homepage with weather, events, and member spotlights.">
   <meta name="author" content="Samuel Pelley">
-  <title>Boise Chamber of Commerce</title>
   <link rel="icon" href="favicon.ico">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Boise Chamber of Commerce">
+  <meta property="og:description" content="Boise Chamber of Commerce homepage with weather, events, and member spotlights.">
+  <meta property="og:image" content="https://pelleyj.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
   <header>
-    <h1>Boise Chamber of Commerce</h1>
+    <img src="images/logo.png" alt="Boise Chamber Logo" height="50">
     <nav>
       <a href="index.html">Home</a>
       <a href="directory.html">Directory</a>
       <a href="#">Join</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="images/hero.jpg" alt="Downtown Boise cityscape" loading="lazy">
-      <div class="cta">
-        <a href="#">Join the Chamber →</a>
-      </div>
-    </section>
+    <h1>Boise Chamber of Commerce</h1>
 
-    <!-- Events & Weather -->
+    <div class="hero">
+      <img src="images/hero.jpg" alt="Downtown Boise skyline">
+      <div class="cta">
+        <a href="#">Join the Chamber</a>
+      </div>
+    </div>
+
     <section class="events-weather">
       <div class="events">
         <h2>Upcoming Events</h2>
         <ul>
-          <li>Boise Business Meetup - July 22</li>
-          <li>Downtown Market Networking - July 29</li>
-          <li>Chamber Lunch & Learn - August 5</li>
+          <li><strong>July 20:</strong> Downtown Mixer @ 6pm</li>
+          <li><strong>July 22:</strong> Summer Business Expo</li>
+          <li><strong>July 25:</strong> Ribbon Cutting - New Cafe</li>
         </ul>
       </div>
-
       <div class="weather">
-        <h2>Current Weather in Boise</h2>
-        <p><strong>Temperature:</strong> <span id="current-temp">--</span> °F</p>
-        <p><strong>Condition:</strong> <span id="description">Loading...</span></p>
+        <h2>Weather in Boise</h2>
+        <p><strong>Temperature:</strong> <span id="current-temp"></span>°F</p>
+        <p><strong>Condition:</strong> <span id="description"></span></p>
         <div id="forecast"></div>
       </div>
     </section>
 
-    <!-- Spotlight Members -->
     <section class="spotlights">
       <h2>Member Spotlights</h2>
       <div class="spotlight-grid" id="spotlights"></div>
@@ -59,6 +66,6 @@
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="scripts/index.js" defer></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
