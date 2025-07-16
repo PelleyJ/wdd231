@@ -1,4 +1,23 @@
-/* Chamber index styles */
+/* Chamber index styles - Clean Light Theme with Blues and Whites */
+
+:root {
+  --primary-color: #0077cc;
+  --secondary-color: #e0f0ff;
+  --text-color: #1a1a1a;
+  --bg-color: #ffffff;
+  --light-gray: #f2f2f2;
+  --border-color: #cbd6e2;
+  --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
 .hero {
   position: relative;
@@ -9,12 +28,13 @@
   height: auto;
   object-fit: cover;
   display: block;
+  max-height: 600px;
 }
 
 .hero .cta {
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
+  bottom: 2rem;
+  left: 2rem;
   background: rgba(0, 0, 0, 0.6);
   padding: 1rem 1.5rem;
   border-radius: 8px;
@@ -23,51 +43,79 @@
 .hero .cta a {
   color: white;
   font-size: 1.25rem;
+  font-weight: bold;
   text-decoration: none;
 }
 
 .events-weather {
   display: grid;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background-color: var(--light-gray);
 }
 
-.events, .weather {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-radius: 6px;
+.events,
+.weather {
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.events h2,
+.weather h2,
+.spotlights h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-top: 0;
 }
 
 .spotlights {
-  padding: 1rem;
+  background-color: var(--light-gray);
+  padding: 2rem 1rem;
 }
 
 .spotlight-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-columns: 1fr;
 }
 
 .spotlight-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   padding: 1rem;
   text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-3px);
 }
 
 .spotlight-card img {
   max-width: 100px;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   display: block;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 600px) {
   .events-weather {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .spotlight-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
