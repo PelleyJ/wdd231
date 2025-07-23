@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const apiKey = "YOUR_API_KEY"; // Replace with your OpenWeatherMap API key
+  const apiKey = "YOUR_REAL_API_KEY"; // 🔑 Replace with your real OpenWeatherMap API key
   const city = "Boise";
   const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         div.classList.add("spotlight-card");
         div.innerHTML = `
           <h3>${member.name}</h3>
-          <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+          <img src="${member.image}" alt="${member.name} logo" loading="lazy">
           <p><strong>Phone:</strong> ${member.phone}</p>
           <p><strong>Address:</strong> ${member.address}</p>
           <p><a href="${member.website}" target="_blank">${member.website}</a></p>
