@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const apiKey = "YOUR_API_KEY"; // Replace with your real OpenWeatherMap API key
+  const apiKey = "7a90a82ba59a3da209310e539df8cfd5";
   const city = "Boise";
 
-  // Current weather
+  // Fetch current weather
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
     .then(res => res.json())
     .then(data => {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Weather fetch error:", err));
 
-  // 3-day forecast
+  // Fetch 3-day forecast
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`)
     .then(res => res.json())
     .then(data => {
@@ -23,9 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const temp = Math.round(entry.main.temp);
         forecastDiv.innerHTML += `<p>${day}: ${temp}°F</p>`;
       });
-    });
+    })
+    .catch(err => console.error("Forecast fetch error:", err));
 
-  // Spotlights
+  // Load spotlight members
   fetch("data/members.json")
     .then(res => res.json())
     .then(members => {
@@ -48,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         container.appendChild(card);
       });
-    });
+    })
+    .catch(err => console.error("Spotlight fetch error:", err));
 
   // Footer updates
   document.getElementById("year").textContent = new Date().getFullYear();
