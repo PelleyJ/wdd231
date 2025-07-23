@@ -1,22 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const apiKey = "YOUR_REAL_API_KEY"; // 🔑 Replace with your real OpenWeatherMap API key
+  const apiKey = "YOUR_API_KEY"; // Replace with your real OpenWeatherMap API key
   const city = "Boise";
-  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
 
-  // Fetch current weather
-  fetch(weatherUrl)
-    .then((res) => res.json())
-    .then((data) => {
+  // Current weather
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
+    .then(res => res.json())
+    .then(data => {
       document.getElementById("current-temp").textContent = Math.round(data.main.temp);
       document.getElementById("description").textContent = data.weather[0].description;
     })
-    .catch((err) => console.error("Weather fetch error:", err));
+    .catch(err => console.error("Weather fetch error:", err));
 
-  // Fetch 3-day forecast
-  fetch(forecastUrl)
-    .then((res) => res.json())
-    .then((data) => {
+  // 3-day forecast
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`)
+    .then(res => res.json())
+    .then(data => {
       const forecastDiv = document.getElementById("forecast");
       forecastDiv.innerHTML = "<h3>3-Day Forecast:</h3>";
       const noonForecasts = data.list.filter(entry => entry.dt_txt.includes("12:00:00")).slice(0, 3);
@@ -27,30 +25,32 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  // Load spotlight members
+  // Spotlights
   fetch("data/members.json")
-    .then((res) => res.json())
-    .then((members) => {
-      const spotlights = document.getElementById("spotlights");
-      const goldSilver = members.filter(m => m.membership === "gold" || m.membership === "silver");
-      const selected = goldSilver.sort(() => 0.5 - Math.random()).slice(0, 3);
+    .then(res => res.json())
+    .then(members => {
+      const container = document.getElementById("spotlights");
+      const selected = members
+        .filter(m => m.membership === "gold" || m.membership === "silver")
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3);
 
       selected.forEach(member => {
-        const div = document.createElement("div");
-        div.classList.add("spotlight-card");
-        div.innerHTML = `
+        const card = document.createElement("div");
+        card.className = "spotlight-card";
+        card.innerHTML = `
           <h3>${member.name}</h3>
-          <img src="${member.image}" alt="${member.name} logo" loading="lazy">
+          <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
           <p><strong>Phone:</strong> ${member.phone}</p>
           <p><strong>Address:</strong> ${member.address}</p>
           <p><a href="${member.website}" target="_blank">${member.website}</a></p>
           <p><strong>Level:</strong> ${member.membership}</p>
         `;
-        spotlights.appendChild(div);
+        container.appendChild(card);
       });
     });
 
-  // Footer year and last modified
+  // Footer updates
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("lastModified").textContent = document.lastModified;
 });
