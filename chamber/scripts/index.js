@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const apiKey = "7a90a82ba59a3da209310e539df8cfd5";
   const city = "Boise";
 
-  // Fetch current weather
+  // Current weather
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
     .then(res => res.json())
     .then(data => {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Weather fetch error:", err));
 
-  // Fetch 3-day forecast
+  // 3-day forecast
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`)
     .then(res => res.json())
     .then(data => {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Forecast fetch error:", err));
 
-  // Load spotlight members
+  // Spotlights (fixed path issue)
   fetch("data/members.json")
     .then(res => res.json())
     .then(members => {
