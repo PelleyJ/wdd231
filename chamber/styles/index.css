@@ -38,13 +38,18 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #0077cc;
+  color: #005999; /* Darker blue for better contrast */
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #005999;
+  color: #003355;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  border-bottom: 2px solid #005999;
 }
 
 /* Visually Hidden Class for A11y */
@@ -136,7 +141,7 @@ nav a:hover {
 }
 
 .spotlight-card a {
-  color: #0077cc;
+  color: #005999; /* Improved contrast */
   text-decoration: none;
   font-weight: 500;
   word-wrap: break-word;
