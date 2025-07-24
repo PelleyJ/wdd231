@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You!</title>
+</head>
+<body>
+  <header>
+    <h1>Thank You for Joining the Chamber</h1>
+  </header>
+
+  <main>
+    <section id="confirmation"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Boise Chamber</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const output = `
+      <p><strong>First Name:</strong> ${params.get("fname")}</p>
+      <p><strong>Last Name:</strong> ${params.get("lname")}</p>
+      <p><strong>Email:</strong> ${params.get("email")}</p>
+      <p><strong>Phone:</strong> ${params.get("phone")}</p>
+      <p><strong>Organization:</strong> ${params.get("orgname")}</p>
+      <p><strong>Submitted:</strong> ${params.get("timestamp")}</p>
+    `;
+    document.getElementById("confirmation").innerHTML = output;
+  </script>
+</body>
+</html>

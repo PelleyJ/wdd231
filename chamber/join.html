@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Chamber</title>
+  <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+  <header>
+    <h1>Boise Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="join.html">Join</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Membership Application</h2>
+    <form method="get" action="thankyou.html">
+      <label>
+        First Name:
+        <input type="text" name="fname" title="First Name" autocomplete="given-name" required>
+      </label>
+
+      <label>
+        Last Name:
+        <input type="text" name="lname" title="Last Name" autocomplete="family-name" required>
+      </label>
+
+      <label>
+        Title:
+        <input type="text" name="title" title="Organizational Title" autocomplete="organization-title"
+               pattern="[A-Za-z\s\-]{7,}" placeholder="Marketing Director">
+      </label>
+
+      <label>
+        Email:
+        <input type="email" name="email" title="Email" autocomplete="email" required
+               placeholder="example@email.com">
+      </label>
+
+      <label>
+        Phone:
+        <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+      </label>
+
+      <label>
+        Business/Organization:
+        <input type="text" name="orgname" title="Organization Name" autocomplete="organization" required>
+      </label>
+
+      <label>
+        Membership Level:
+        <select name="membership" title="Membership Level" required>
+          <option value="np">NP Membership</option>
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>
+        Business Description:
+        <textarea name="description" title="Business Description"></textarea>
+      </label>
+
+      <input type="hidden" id="timestamp" name="timestamp">
+      <input type="submit" value="Submit Application">
+    </form>
+
+    <section class="cards">
+      <div class="membership-card">
+        <h3>NP Membership</h3>
+        <a href="#np-modal">View Benefits</a>
+      </div>
+      <div class="membership-card">
+        <h3>Bronze Membership</h3>
+        <a href="#bronze-modal">View Benefits</a>
+      </div>
+      <div class="membership-card">
+        <h3>Silver Membership</h3>
+        <a href="#silver-modal">View Benefits</a>
+      </div>
+      <div class="membership-card">
+        <h3>Gold Membership</h3>
+        <a href="#gold-modal">View Benefits</a>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <dialog id="np-modal">
+      <h2>NP Membership Benefits</h2>
+      <p>No fee. Event invitations and newsletters.</p>
+      <button onclick="document.getElementById('np-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <h2>Bronze Membership Benefits</h2>
+      <p>Event access, networking, and social media mentions.</p>
+      <button onclick="document.getElementById('bronze-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <h2>Silver Membership Benefits</h2>
+      <p>Includes Bronze perks + homepage spotlight and training events.</p>
+      <button onclick="document.getElementById('silver-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <h2>Gold Membership Benefits</h2>
+      <p>All lower perks + premium promotions and sponsor priority.</p>
+      <button onclick="document.getElementById('gold-modal').close()">Close</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Boise Chamber</p>
+  </footer>
+
+  <script src="scripts/join.js"></script>
+</body>
+</html>
