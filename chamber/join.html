@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join the Chamber</title>
+  <title>Join the Boise Chamber of Commerce</title>
+  <meta name="description" content="Apply to become a member of the Boise Chamber of Commerce. Join the business community and access exclusive benefits.">
+  <meta name="author" content="Samuel Pelley">
+  <meta property="og:title" content="Join the Boise Chamber of Commerce">
+  <meta property="og:description" content="Become a member of the Boise Chamber to connect, grow, and promote your business.">
+  <meta property="og:image" content="https://pelleyj.github.io/wdd231/chamber/images/logo.webp">
+  <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/join.html">
   <link rel="stylesheet" href="styles/join.css">
+  <link rel="icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Boise Chamber of Commerce</h1>
+    <div class="logo-title">
+      <img src="images/logo.webp" alt="Boise Chamber Logo" height="50">
+      <h1>Join the Boise Chamber of Commerce</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="join.html">Join</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" aria-current="page">Join</a>
     </nav>
   </header>
 
@@ -53,6 +65,7 @@
       <label>
         Membership Level:
         <select name="membership" title="Membership Level" required>
+          <option value="" disabled selected>Select a membership level</option>
           <option value="np">NP Membership</option>
           <option value="bronze">Bronze Membership</option>
           <option value="silver">Silver Membership</option>
@@ -118,6 +131,15 @@
     <p>&copy; 2025 Boise Chamber</p>
   </footer>
 
-  <script src="scripts/join.js"></script>
+  <script>
+    document.getElementById("timestamp").value = new Date().toISOString();
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const id = link.getAttribute("href").substring(1);
+        document.getElementById(id).showModal();
+      });
+    });
+  </script>
 </body>
 </html>
