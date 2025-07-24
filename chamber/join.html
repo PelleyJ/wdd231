@@ -6,10 +6,13 @@
   <title>Join the Boise Chamber of Commerce</title>
   <meta name="description" content="Apply to become a member of the Boise Chamber of Commerce. Join the business community and access exclusive benefits.">
   <meta name="author" content="Samuel Pelley">
+
+  <!-- Open Graph Meta -->
   <meta property="og:title" content="Join the Boise Chamber of Commerce">
   <meta property="og:description" content="Become a member of the Boise Chamber to connect, grow, and promote your business.">
   <meta property="og:image" content="https://pelleyj.github.io/wdd231/chamber/images/logo.webp">
   <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/join.html">
+
   <link rel="stylesheet" href="styles/join.css">
   <link rel="icon" href="images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -18,7 +21,6 @@
   <header>
     <div class="logo-title">
       <img src="images/logo.webp" alt="Boise Chamber Logo" height="50">
-      <h1>Join the Boise Chamber of Commerce</h1>
     </div>
     <nav>
       <a href="index.html">Home</a>
@@ -28,6 +30,7 @@
   </header>
 
   <main>
+    <h1>Join the Boise Chamber of Commerce</h1>
     <h2>Membership Application</h2>
     <form method="get" action="thankyou.html">
       <label>
@@ -131,6 +134,7 @@
     <p>&copy; 2025 Boise Chamber</p>
   </footer>
 
+  <!-- Inline JavaScript for timestamp + modal handling -->
   <script>
     document.getElementById("timestamp").value = new Date().toISOString();
     document.querySelectorAll('a[href^="#"]').forEach(link => {
