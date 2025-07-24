@@ -10,9 +10,8 @@
   <!-- Open Graph Meta -->
   <meta property="og:title" content="Join the Boise Chamber of Commerce">
   <meta property="og:description" content="Become a member of the Boise Chamber to connect, grow, and promote your business.">
-  <meta property="og:image" content="images/logo.webp">
-  <meta property="og:url" content="join.html">
-
+  <meta property="og:image" content="https://pelleyj.github.io/wdd231/chamber/images/logo.webp">
+  <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/join.html">
 
   <link rel="stylesheet" href="styles/join.css">
   <link rel="icon" href="images/favicon.ico">
@@ -135,16 +134,7 @@
     <p>&copy; 2025 Boise Chamber</p>
   </footer>
 
-  <!-- Inline JavaScript for timestamp + modal handling -->
-  <script>
-    document.getElementById("timestamp").value = new Date().toISOString();
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        const id = link.getAttribute("href").substring(1);
-        document.getElementById(id).showModal();
-      });
-    });
-  </script>
+  <!-- ✅ External JavaScript file reference -->
+  <script src="scripts/join.js" defer></script>
 </body>
 </html>
