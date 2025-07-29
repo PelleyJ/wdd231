@@ -1,0 +1,24 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #003366;
+  margin: 0;
+  padding: 1rem;
+}
+
+header, footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1, h2 {
+  font-family: 'Anton', sans-serif;
+  color: #003366;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
