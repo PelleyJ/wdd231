@@ -7,23 +7,21 @@
   <meta name="description" content="Explore Boise's top attractions, including parks, museums, and historic sites.">
   <meta name="author" content="Samuel Pelley">
 
-  <!-- Favicon -->
+  <!-- ✅ Favicon -->
   <link rel="icon" href="images/logo.webp" type="image/webp">
 
-  <!-- Open Graph Meta Tags -->
+  <!-- ✅ Open Graph Meta Tags -->
   <meta property="og:title" content="Discover Boise - Chamber">
   <meta property="og:description" content="Explore Boise's top attractions, including parks, museums, and historic sites.">
   <meta property="og:image" content="https://pelleyj.github.io/wdd231/chamber/images/hero.webp">
   <meta property="og:url" content="https://pelleyj.github.io/wdd231/chamber/discover.html">
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles/discover.css">
+  <!-- ✅ External CSS -->
+  <link rel="stylesheet" href="chamber/styles/discover.css">
 </head>
 <body>
-
-  <!-- ✅ HEADER FIRST IN BODY -->
   <header>
-    <h1>Discover Boise - Chamber</h1>
+    <p class="site-title">Boise Chamber of Commerce</p>
     <nav aria-label="Main Navigation">
       <a href="index.html">Home</a>
       <a href="discover.html" class="active">Discover</a>
@@ -33,21 +31,14 @@
   </header>
 
   <main>
+    <!-- ✅ H1 is now in the main and matches the <title> exactly -->
+    <h1>Discover Boise - Chamber</h1>
+
     <aside id="visitMessage" aria-live="polite"></aside>
 
     <h2>Local Attractions</h2>
     <div class="grid-container" id="cardContainer">
-      <!-- Cards from JSON will be inserted here -->
-    </div>
-
-    <!-- ✅ Placeholder images to satisfy audit -->
-    <div class="audit-placeholder-images" style="display: none;">
-      <img src="images/greenbelt.webp" alt="" loading="lazy">
-      <img src="images/capitol.webp" alt="" loading="lazy">
-      <img src="images/museum.webp" alt="" loading="lazy">
-      <img src="images/zoo.webp" alt="" loading="lazy">
-      <img src="images/penitentiary.webp" alt="" loading="lazy">
-      <img src="images/downtown.webp" alt="" loading="lazy">
+      <!-- Cards will be populated from discover.json -->
     </div>
   </main>
 
