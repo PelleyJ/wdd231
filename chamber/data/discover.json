@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Boise River Greenbelt",
+    "address": "Boise, ID 83706",
+    "description": "A scenic 25-mile park along the Boise River ideal for walking, biking, and wildlife viewing.",
+    "image": "greenbelt.webp"
+  },
+  {
+    "name": "Idaho State Capitol",
+    "address": "700 W Jefferson St, Boise, ID 83702",
+    "description": "A beautiful historic building housing Idaho’s government, open to tours.",
+    "image": "capitol.webp"
+  },
+  {
+    "name": "Old Idaho Penitentiary",
+    "address": "2445 Old Penitentiary Rd, Boise, ID 83712",
+    "description": "Tour the historic prison and learn about its notorious inmates.",
+    "image": "penitentiary.webp"
+  },
+  {
+    "name": "Boise Art Museum",
+    "address": "670 Julia Davis Dr, Boise, ID 83702",
+    "description": "Contemporary art museum with exhibitions and educational programs.",
+    "image": "museum.webp"
+  },
+  {
+    "name": "Zoo Boise",
+    "address": "355 Julia Davis Dr, Boise, ID 83702",
+    "description": "Home to over 300 animals from around the world.",
+    "image": "zoo.webp"
+  },
+  {
+    "name": "Downtown Boise",
+    "address": "Main St, Boise, ID",
+    "description": "Explore local shops, restaurants, and cultural attractions.",
+    "image": "downtown.webp"
+  },
+  {
+    "name": "Table Rock",
+    "address": "Boise, ID 83712",
+    "description": "Hike to a scenic overlook with panoramic views of the Treasure Valley.",
+    "image": "tablerock.webp"
+  },
+  {
+    "name": "Boise State University",
+    "address": "1910 University Dr, Boise, ID 83725",
+    "description": "Major university known for academics and the famous blue football field.",
+    "image": "bsu.webp"
+  }
+]

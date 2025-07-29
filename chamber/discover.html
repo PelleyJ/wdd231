@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Boise - Chamber</title>
+  <meta name="description" content="Discover the attractions and demographics of Boise, Idaho.">
+  <meta name="author" content="Samuel Pelley">
+  <link rel="stylesheet" href="styles/discover.css">
+</head>
+<body>
+  <header>
+    <h1>Boise Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="discover.html" class="active">Discover</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+    </nav>
+  </header>
+
+  <main>
+    <aside id="visitMessage"></aside>
+
+    <h2>Discover Boise</h2>
+    <div class="grid-container" id="cardContainer">
+      <!-- Cards from JSON will be inserted here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Boise Chamber of Commerce | Samuel Pelley</p>
+  </footer>
+
+  <script src="scripts/discover.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
