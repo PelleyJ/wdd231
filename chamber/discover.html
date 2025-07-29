@@ -21,8 +21,8 @@
 </head>
 <body>
   <header>
-    <!-- ✅ Updated to match page purpose -->
-    <h1>Discover Boise</h1>
+    <!-- ✅ Site name moved to <p> so h1 can go in <main> -->
+    <p class="site-title">Boise Chamber of Commerce</p>
     <nav aria-label="Main Navigation">
       <a href="index.html">Home</a>
       <a href="discover.html" class="active">Discover</a>
@@ -32,6 +32,9 @@
   </header>
 
   <main>
+    <!-- ✅ Moved h1 into <main> to satisfy audit -->
+    <h1>Discover Boise</h1>
+
     <aside id="visitMessage" aria-live="polite"></aside>
 
     <h2>Local Attractions</h2>
