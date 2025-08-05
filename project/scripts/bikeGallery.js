@@ -8,7 +8,7 @@ const modalCloseBtn = document.getElementById('modal-close');
 
 async function fetchBikes() {
   try {
-    const response = await fetch('data/bikes.json'); // ✅ Updated path
+    const response = await fetch('data/bikes.json');
     if (!response.ok) throw new Error('Failed to fetch bike data');
     const bikes = await response.json();
     displayBikes(bikes);
