@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore MotoGP bikes from top teams and manufacturers." />
+  <meta name="author" content="Samuel Pelley" />
+  <meta property="og:title" content="Pelley Moto | MotoGP Bikes" />
+  <meta property="og:description" content="View MotoGP bikes and mark your favorites." />
+  <meta property="og:image" content="images/og-image.webp" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/bikes.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <title>Pelley Moto | MotoGP Bikes</title>
+</head>
+<body>
+  <header>
+    <div class="logo">🏍️ Pelley Moto</div>
+    <button class="hamburger" aria-label="Toggle Menu">☰</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="page2.html">Gear</a>
+      <a href="page3.html">Bikes</a>
+      <a href="form.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>MotoGP Bike Gallery</h1>
+      <p>Click any bike to learn more or mark as a favorite!</p>
+    </section>
+
+    <section id="bike-gallery" class="grid"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button id="modal-close" aria-label="Close modal">✖</button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-team"></p>
+      <p id="modal-year"></p>
+      <p id="modal-engine"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Pelley Moto | <a href="attributions.html">Attributions</a> | <a href="https://www.youtube.com/YOUR_VIDEO_URL" target="_blank">Project Demo Video</a></p>
+  </footer>
+
+  <script type="module" src="scripts/bikeGallery.js"></script>
+</body>
+</html>

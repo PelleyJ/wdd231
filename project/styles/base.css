@@ -1,0 +1,97 @@
+/* base.css */
+:root {
+  --primary: #003366;
+  --accent: #ffcc00;
+  --text: #ffffff;
+  --body-font: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+  background-color: #fff;
+  color: var(--primary);
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.hamburger {
+  background: none;
+  color: var(--text);
+  border: none;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.hero {
+  text-align: center;
+  background: #eee;
+  padding: 2rem;
+}
+
+.featured, .intro {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cta {
+  display: inline-block;
+  background-color: var(--accent);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--text);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
