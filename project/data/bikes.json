@@ -1,122 +1,90 @@
 [
   {
     "id": 1,
-    "name": "Yamaha YZR-M1",
-    "team": "Monster Energy Yamaha",
-    "year": 2024,
-    "engine": "Inline-four 1000cc",
-    "image": "images/yamaha-m1.webp"
+    "name": "Aprilia RS-GP",
+    "team": "Aprilia Racing",
+    "year": 2025,
+    "engine": "V4 1000cc",
+    "image": "images/aprilia-racing.webp"
   },
   {
     "id": 2,
-    "name": "Honda RC213V",
-    "team": "Repsol Honda",
-    "year": 2024,
+    "name": "Ducati Desmosedici GP25",
+    "team": "Ducati Lenovo Team",
+    "year": 2025,
     "engine": "V4 1000cc",
-    "image": "images/honda-rc213v.webp"
+    "image": "images/ducati-lenovo.webp"
   },
   {
     "id": 3,
-    "name": "Ducati Desmosedici GP24",
-    "team": "Ducati Lenovo",
-    "year": 2024,
-    "engine": "V4 1000cc",
-    "image": "images/ducati-gp24.webp"
+    "name": "Yamaha YZR-M1",
+    "team": "Monster Energy Yamaha MotoGP",
+    "year": 2025,
+    "engine": "Inline-four 1000cc",
+    "image": "images/yamaha-monster.webp"
   },
   {
     "id": 4,
-    "name": "Suzuki GSX-RR",
-    "team": "Team Suzuki Ecstar",
-    "year": 2022,
-    "engine": "Inline-four 1000cc",
-    "image": "images/suzuki-gsxrr.webp"
+    "name": "Honda RC213V",
+    "team": "Honda HRC Castrol",
+    "year": 2025,
+    "engine": "V4 1000cc",
+    "image": "images/honda-hrc.webp"
   },
   {
     "id": 5,
-    "name": "KTM RC16",
-    "team": "Red Bull KTM Factory Racing",
-    "year": 2024,
-    "engine": "V4 1000cc",
-    "image": "images/ktm-rc16.webp"
-  },
-  {
-    "id": 6,
-    "name": "Aprilia RS-GP",
-    "team": "Aprilia Racing",
-    "year": 2024,
-    "engine": "V4 1000cc",
-    "image": "images/aprilia-rsgp.webp"
-  },
-  {
-    "id": 7,
-    "name": "LCR Honda RC213V",
+    "name": "Honda RC213V",
     "team": "LCR Honda",
-    "year": 2024,
+    "year": 2025,
     "engine": "V4 1000cc",
     "image": "images/lcr-honda.webp"
   },
   {
-    "id": 8,
-    "name": "Tech3 GASGAS RC16",
-    "team": "GASGAS Factory Racing Tech3",
-    "year": 2024,
+    "id": 6,
+    "name": "Ducati Desmosedici GP25",
+    "team": "Pertamina Enduro VR46 Racing Team",
+    "year": 2025,
     "engine": "V4 1000cc",
-    "image": "images/gasgas-rc16.webp"
+    "image": "images/vr46.webp"
+  },
+  {
+    "id": 7,
+    "name": "Yamaha YZR-M1",
+    "team": "Prima Pramac Yamaha MotoGP",
+    "year": 2025,
+    "engine": "Inline-four 1000cc",
+    "image": "images/pramac-yamaha.webp"
+  },
+  {
+    "id": 8,
+    "name": "Ducati Desmosedici GP25",
+    "team": "BKB Gresini Racing MotoGP",
+    "year": 2025,
+    "engine": "V4 1000cc",
+    "image": "images/gresini.webp"
   },
   {
     "id": 9,
-    "name": "VR46 Ducati",
-    "team": "Mooney VR46 Racing",
-    "year": 2024,
+    "name": "KTM RC16",
+    "team": "Red Bull KTM Factory Racing",
+    "year": 2025,
     "engine": "V4 1000cc",
-    "image": "images/vr46-ducati.webp"
+    "image": "images/ktm-factory.webp"
   },
   {
     "id": 10,
-    "name": "Pramac Ducati",
-    "team": "Prima Pramac Racing",
-    "year": 2024,
+    "name": "KTM RC16",
+    "team": "Red Bull KTM Tech3",
+    "year": 2025,
     "engine": "V4 1000cc",
-    "image": "images/pramac-ducati.webp"
+    "image": "images/ktm-tech3.webp"
   },
   {
     "id": 11,
-    "name": "Gresini Ducati",
-    "team": "Gresini Racing MotoGP",
-    "year": 2024,
+    "name": "Aprilia RS-GP",
+    "team": "Trackhouse MotoGP Team",
+    "year": 2025,
     "engine": "V4 1000cc",
-    "image": "images/gresini-ducati.webp"
-  },
-  {
-    "id": 12,
-    "name": "Trackhouse Aprilia",
-    "team": "Trackhouse Racing",
-    "year": 2024,
-    "engine": "V4 1000cc",
-    "image": "images/trackhouse-aprilia.webp"
-  },
-  {
-    "id": 13,
-    "name": "Test Ducati GP",
-    "team": "Ducati Test Team",
-    "year": 2024,
-    "engine": "V4 1000cc",
-    "image": "images/test-ducati.webp"
-  },
-  {
-    "id": 14,
-    "name": "Honda Test Bike",
-    "team": "Honda Test Team",
-    "year": 2024,
-    "engine": "V4 1000cc",
-    "image": "images/honda-test.webp"
-  },
-  {
-    "id": 15,
-    "name": "Aprilia Test RS-GP",
-    "team": "Aprilia Test Team",
-    "year": 2024,
-    "engine": "V4 1000cc",
-    "image": "images/aprilia-test.webp"
+    "image": "images/trackhouse.webp"
   }
 ]
