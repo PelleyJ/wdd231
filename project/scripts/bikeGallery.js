@@ -1,3 +1,4 @@
+// scripts/bikeGallery.js
 import { openModal, closeModal, populateModal } from './modal.js';
 import { toggleFavorite, isFavorite } from './storage.js';
 
@@ -7,7 +8,7 @@ const modalCloseBtn = document.getElementById('modal-close');
 
 async function fetchBikes() {
   try {
-    const response = await fetch('../data/bikes.json');
+    const response = await fetch('data/bikes.json'); // ✅ Updated path
     if (!response.ok) throw new Error('Failed to fetch bike data');
     const bikes = await response.json();
     displayBikes(bikes);
@@ -50,7 +51,7 @@ function displayBikes(bikes) {
   });
 }
 
-// Close modal
+// Modal close functionality
 modalCloseBtn.addEventListener('click', closeModal);
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
