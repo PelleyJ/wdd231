@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Recommended motorcycle gear for new and experienced riders." />
+
+  <title>Pelley Moto | Gear Guide</title>
+  <meta name="description" content="Recommended motorcycle gear for new and experienced riders. Browse handpicked MotoGP-inspired helmets, jackets, gloves, and boots." />
   <meta name="author" content="Samuel Pelley" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Pelley Moto | Gear Guide" />
   <meta property="og:description" content="Browse our handpicked motorcycle gear essentials." />
-  <meta property="og:image" content="images/og-image.webp" />
+  <meta property="og:image" content="https://pelleyj.github.io/wdd231/project/images/og-image.webp" />
+  <meta property="og:url" content="https://pelleyj.github.io/wdd231/project/page2.html" />
   <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <title>Pelley Moto | Gear Guide</title>
 </head>
+
 <body>
   <header>
     <div class="logo">🏍️ Pelley Moto</div>
     <button class="hamburger" aria-label="Toggle Menu">☰</button>
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="page2.html">Gear</a>
+      <a href="page2.html" class="active" aria-current="page">Gear</a>
       <a href="page3.html">Bikes</a>
       <a href="form.html">Contact</a>
     </nav>
@@ -27,25 +41,47 @@
 
   <main>
     <section class="hero">
-      <h1>Gear Up Right</h1>
-      <p>Protect yourself with quality gear on every ride.</p>
+      <h1>Gear Guide</h1>
+      <p>Handpicked essentials for safer, happier riding.</p>
     </section>
 
-    <section class="gear-list">
-      <h2>Recommended Essentials</h2>
-      <ul>
-        <li><strong>Helmet:</strong> Always wear a DOT-approved full-face helmet for maximum protection.</li>
-        <li><strong>Riding Jacket:</strong> Choose armored jackets with abrasion resistance and ventilation.</li>
-        <li><strong>Gloves:</strong> Go for padded gloves with knuckle protection and grip control.</li>
-        <li><strong>Boots:</strong> Ankle-high boots with non-slip soles improve safety.</li>
-        <li><strong>Pants:</strong> Kevlar-reinforced or armored pants shield against impact and road rash.</li>
-        <li><strong>Rain Gear:</strong> Keep a compact waterproof set for unexpected weather changes.</li>
+    <section class="featured intro">
+      <h2>Essentials</h2>
+
+      <!-- NOTE: make sure these files exist in /project/images/ -->
+      <ul class="gear-list">
+        <li class="gear-card">
+          <img src="images/helmet.webp" alt="Full-face racing helmet" loading="lazy" />
+          <h3>Full-Face Helmet</h3>
+          <p>Best impact protection and aerodynamics for highway and track.</p>
+        </li>
+
+        <li class="gear-card">
+          <img src="images/jacket.webp" alt="Leather motorcycle jacket with armor" loading="lazy" />
+          <h3>Leather Jacket</h3>
+          <p>Abrasion resistance with CE armor at shoulders and elbows.</p>
+        </li>
+
+        <li class="gear-card">
+          <img src="images/gloves.webp" alt="Gloves with hard knuckles and palm sliders" loading="lazy" />
+          <h3>Gauntlet Gloves</h3>
+          <p>Wrist coverage and hard-knuckle protection for spirited rides.</p>
+        </li>
+
+        <li class="gear-card">
+          <img src="images/boots.webp" alt="Motorcycle boots with ankle bracing" loading="lazy" />
+          <h3>Riding Boots</h3>
+          <p>Stiff sole, toe sliders, and ankle support for stability.</p>
+        </li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Pelley Moto | <a href="attributions.html">Attributions</a> | <a href="https://www.youtube.com/YOUR_VIDEO_URL" target="_blank">Project Demo Video</a></p>
+    <p>&copy; 2025 Pelley Moto |
+      <a href="attributions.html">Attributions</a> |
+      <a href="https://www.youtube.com/YOUR_VIDEO_URL" target="_blank" rel="noopener">Project Demo Video</a>
+    </p>
   </footer>
 
   <script type="module" src="scripts/index.js"></script>
