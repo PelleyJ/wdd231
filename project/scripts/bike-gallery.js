@@ -1,4 +1,4 @@
-// scripts/bikegallery.js
+// scripts/bike-gallery.js
 import { openModal, closeModal, populateModal } from './modal.js';
 import { toggleFavorite, isFavorite } from './storage.js';
 
@@ -8,7 +8,7 @@ const modalCloseBtn = document.getElementById('modal-close');
 
 async function fetchBikes() {
   try {
-    const response = await fetch('data/bikes.json');
+    const response = await fetch('data/bikes.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error('Failed to fetch bike data');
     const bikes = await response.json();
     displayBikes(bikes);
@@ -18,12 +18,13 @@ async function fetchBikes() {
 }
 
 function displayBikes(bikes) {
+  gallery.innerHTML = '';
   bikes.forEach((bike) => {
     const card = document.createElement('div');
     card.className = 'card';
 
     card.innerHTML = `
-      <img src="${bike.image}" alt="${bike.name}" loading="lazy">
+      <img src="${bike.image}" alt="${bike.team} – ${bike.name}" loading="lazy" decoding="async">
       <div class="card-content">
         <h3>${bike.name}</h3>
         <p><strong>Team:</strong> ${bike.team}</p>
@@ -53,11 +54,7 @@ function displayBikes(bikes) {
 
 // Modal close functionality
 modalCloseBtn.addEventListener('click', closeModal);
-window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
-});
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
-});
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
 fetchBikes();

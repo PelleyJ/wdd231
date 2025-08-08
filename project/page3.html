@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore MotoGP bikes from top teams and manufacturers." />
+
+  <title>Pelley Moto | MotoGP Bikes</title>
+  <meta name="description" content="Explore MotoGP bikes from top teams and manufacturers. View specs and mark your favorites." />
   <meta name="author" content="Samuel Pelley" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Pelley Moto | MotoGP Bikes" />
-  <meta property="og:description" content="View MotoGP bikes and mark your favorites." />
-  <meta property="og:image" content="images/og-image.webp" />
+  <meta property="og:description" content="Browse MotoGP bikes by team and mark your favorites." />
+  <meta property="og:image" content="https://pelleyj.github.io/wdd231/project/images/og-image.webp" />
+  <meta property="og:url" content="https://pelleyj.github.io/wdd231/project/page3.html" />
   <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/bikes.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <title>Pelley Moto | MotoGP Bikes</title>
 </head>
 <body>
   <header>
@@ -21,7 +34,7 @@
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="page2.html">Gear</a>
-      <a href="page3.html">Bikes</a>
+      <a href="page3.html" class="active" aria-current="page">Bikes</a>
       <a href="form.html">Contact</a>
     </nav>
   </header>
@@ -29,10 +42,10 @@
   <main>
     <section class="hero">
       <h1>MotoGP Bike Gallery</h1>
-      <p>Click any bike to learn more or mark as a favorite!</p>
+      <p>Click any bike to learn more or mark as a favorite.</p>
     </section>
 
-    <section id="bike-gallery" class="grid"></section>
+    <section id="bike-gallery" class="grid" aria-live="polite"></section>
   </main>
 
   <!-- Modal -->
@@ -47,9 +60,10 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 Pelley Moto | <a href="attributions.html">Attributions</a> | <a href="https://www.youtube.com/YOUR_VIDEO_URL" target="_blank">Project Demo Video</a></p>
+    <p>&copy; 2025 Pelley Moto | <a href="attributions.html">Attributions</a> | <a href="https://www.youtube.com/YOUR_VIDEO_URL" target="_blank" rel="noopener">Project Demo Video</a></p>
   </footer>
 
-  <script type="module" src="scripts/bikeGallery.js"></script>
+  <!-- IMPORTANT: file renamed to bike-gallery.js -->
+  <script type="module" src="scripts/bike-gallery.js"></script>
 </body>
 </html>
