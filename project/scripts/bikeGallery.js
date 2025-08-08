@@ -1,4 +1,4 @@
-// scripts/bikeGallery.js
+// scripts/bikegallery.js
 import { openModal, closeModal, populateModal } from './modal.js';
 import { toggleFavorite, isFavorite } from './storage.js';
 
